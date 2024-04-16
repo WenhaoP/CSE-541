@@ -1,0 +1,9 @@
+name: cse-541
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - ipykernel
+  - numpy
+  - pandas
+  - matplotlib
