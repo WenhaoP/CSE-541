@@ -2,8 +2,12 @@ name: cse-541
 channels:
   - conda-forge
 dependencies:
-  - python
+  - python=3.10
   - ipykernel
   - numpy
   - pandas
   - matplotlib
+  - typing_extensions
+  - pip
+  - pip:
+    - universal-portfolios
