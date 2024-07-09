@@ -1,5 +1,5 @@
 import numpy as np
-from math import log, ceil
+import math
 
 def ExploreThenCommit(bandit, n, m, seed=541):
     """
@@ -47,14 +47,14 @@ def FindOptimalM(n, gap):
     gap: the suboptimal gap
     """
 
-    return max(1, ceil(4 / gap ** 2 * log(n * gap ** 2 / 4)))
+    return max(1, math.ceil(4 / gap ** 2 * math.log(n * gap ** 2 / 4)))
 
 def FindUpperBound(n, gap):
     """ 
     Find the upper bound on the regret in equation 6.6 in Lattimore (2018)
     """
 
-    return min(n * gap, gap + 4 / gap * (1 + max(0, log(n * gap ** 2 / 4))))
+    return min(n * gap, gap + 4 / gap * (1 + max(0, math.log(n * gap ** 2 / 4))))
 
 def FollowTheLeader(bandit, n, seed=541):
     # implement the Follow-the-Leader algorithm by replacing
